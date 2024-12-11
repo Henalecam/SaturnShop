@@ -1,8 +1,9 @@
+# app/controllers/products_controller.rb
 class ProductsController < ApplicationController
   def index
-    category = Category.find(params[:category_id])
-    @products = category.products.includes(:product_variants)
-    render json: @products, include: :product_variants
+    q = Product.ransack(params[:q])
+    @products = q.result.page(params[:page]).per(10)
+    render json: @products
   end
 
   def show
