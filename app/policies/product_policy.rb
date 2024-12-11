@@ -5,7 +5,7 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin? # Apenas admins podem criar produtos
+    user.admin?
   end
 
   def update?
