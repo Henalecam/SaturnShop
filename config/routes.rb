@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # Rota para exibir categorias
   resources :categories, only: %i[index show] do
     # Rota aninhada para listar produtos de uma categoria específica

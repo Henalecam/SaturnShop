@@ -11,6 +11,42 @@ gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
+# Autenticação e autorização
+gem 'devise'
+gem 'pundit'
+
+# API e Serialização
+gem 'active_model_serializers'
+gem 'jbuilder'
+
+# Paginação
+gem 'kaminari'
+
+# Busca e filtros
+gem 'ransack'
+
+# Upload de imagens
+gem 'image_processing', '~> 1.2' # Para Active Storage
+gem 'carrierwave'
+
+# Testes
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
+
+# Performance
+gem 'bullet'
+
+# Documentação da API
+gem 'rswag'
+
+# Outras ferramentas úteis
+gem 'friendly_id'
+gem 'annotate'
+
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
@@ -44,4 +80,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
